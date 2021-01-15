@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap-reboot';
+@import './styles/bootstrap-override';
+@import '~bootstrap/scss/bootstrap-grid';
+
+@import './styles/constants';
+@import './styles/mixins';
+@import './styles/text';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family-std;
+  background-color: $white;
+  color: $black;
+}

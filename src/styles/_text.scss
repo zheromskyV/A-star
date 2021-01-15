@@ -1,0 +1,79 @@
+.h1,
+.h2 {
+  font-weight: $font-weight-semi-bold;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 15px;
+  }
+}
+
+.h3,
+.h4 {
+  font-weight: $font-weight-bold;
+  margin-bottom: 15px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 10px;
+  }
+}
+
+.h1 {
+  font-size: 42px;
+  line-height: 50px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 35px;
+    line-height: 42px;
+  }
+}
+
+.h2 {
+  font-size: 37px;
+  line-height: 44px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.h3 {
+  font-size: 30px;
+  line-height: 36px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+.h4 {
+  font-size: 22px;
+  line-height: 26px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.text-big {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.text-medium {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-small {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.break-word {
+  display: inline;
+  word-wrap: break-word;
+}
