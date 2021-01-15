@@ -1,0 +1,12 @@
+@import '~src/styles/style-import';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+
+  main {
+    @include page-layout;
+  }
+}
