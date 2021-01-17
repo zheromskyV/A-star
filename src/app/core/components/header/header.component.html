@@ -1,0 +1,61 @@
+<header class="header">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo-section d-flex align-items-center">
+      <span class="logo">{{ dictionary.aStar }}</span>
+    </div>
+
+    <div class="navigation">
+      <div 
+        class="hamburger d-flex d-md-none flex-column align-items-center"
+        [class.cross]="isHamburgerMenuOpened"
+        (click)="toggleHamburgerMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="nav-links-container d-md-flex" [class.d-none]="!isHamburgerMenuOpened">
+        <a
+          class="nav-link"
+          routerLink="/{{ navLinks.home.url }}"
+          routerLinkActive="active"
+          #homeRouterLinkActive="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [class.active]="homeRouterLinkActive.isActive || activeTabName === navLinks.home.name"
+          (click)="closeHamburgerMenu()"
+        >{{ navLinks.home.name }}</a>
+        
+        <a
+          class="nav-link"
+          routerLink="/{{ navLinks.algorithm.url }}"
+          routerLinkActive="active"
+          #algorithmRouterLinkActive="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [class.active]="algorithmRouterLinkActive.isActive || activeTabName === navLinks.algorithm.name"
+          (click)="closeHamburgerMenu()"
+        >{{ navLinks.algorithm.name }}</a>
+        
+        <a
+          class="nav-link"
+          routerLink="/{{ navLinks.about.url }}"
+          routerLinkActive="active"
+          #aboutRouterLinkActive="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [class.active]="aboutRouterLinkActive.isActive || activeTabName === navLinks.about.name"
+          (click)="closeHamburgerMenu()"
+        >{{ navLinks.about.name }}</a>
+        
+        <a
+          class="nav-link"
+          routerLink="/{{ navLinks.contact.url }}"
+          routerLinkActive="active"
+          #contactRouterLinkActive="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [class.active]="contactRouterLinkActive.isActive || activeTabName === navLinks.contact.name"
+          (click)="closeHamburgerMenu()"
+        >{{ navLinks.contact.name }}</a>
+      </nav>
+    </div>
+  </div>
+</header>

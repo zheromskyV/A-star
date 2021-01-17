@@ -20,11 +20,13 @@
       "dom"
     ],
     "esModuleInterop": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "strictPropertyInitialization": false
   }
 }
