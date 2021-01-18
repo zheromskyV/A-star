@@ -1,0 +1,70 @@
+@import '~src/styles/style-import';
+
+:host {
+  display: block;
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: $accent;
+  padding: 10px 0;
+
+  @include media-breakpoint-down(sm) {
+    height: 100%;
+  }
+}
+
+.container,
+.link {
+  height: 100%;
+}
+
+.link {
+  color: $black-complement;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: -5px;
+    width: 0;
+    border-bottom: $border-underlined;
+    border-color: $abs-black;
+    transition: $swift-hover-animation;
+
+    @include media-breakpoint-down(sm) {
+      top: 20px;
+    }
+  }
+
+  &:hover {
+    &::after {
+      width: calc(100% + 10px);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 5px 0;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .icon {
+    height: 18px;
+    width: 18px;
+    margin-right: 6px;
+    filter: $filter-to-black-complement;
+
+    @include media-breakpoint-down(sm) {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
