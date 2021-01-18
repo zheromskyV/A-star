@@ -13,6 +13,7 @@ header {
   left: 0;
   width: 100%;
   box-shadow: $std-shadow;
+  z-index: 100;
 
   @include media-breakpoint-down(sm) {
     height: 60px;

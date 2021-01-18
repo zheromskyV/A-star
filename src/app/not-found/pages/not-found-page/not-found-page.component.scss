@@ -1,0 +1,17 @@
+@import '~src/styles/style-import';
+
+:host {
+  display: block;
+  padding: 30px 0;
+}
+
+.not-found-img {
+  width: 200px;
+  filter: $filter-to-white;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.btn {
+  margin-top: 20px;
+}

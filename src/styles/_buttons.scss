@@ -1,0 +1,77 @@
+@import './constants';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  transition: $std-hover-animation;
+  border-radius: $border-radius-std;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled,
+  &.disabled,
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &.accent {
+    background-color: $accent;
+    color: $black-complement;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 0;
+      border-bottom: $border-underlined;
+      transition: $swift-hover-animation;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $accent-complement;
+      color: $abs-black;
+
+      &::before,
+      &::after {
+        left: -15px;
+        width: calc(100% + 30px);
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+    }
+  }
+
+  &.big {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: $font-weight-bold;
+    padding: 15px 30px;
+  }
+}

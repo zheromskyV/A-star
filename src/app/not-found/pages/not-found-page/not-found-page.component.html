@@ -1,4 +1,10 @@
-<div class="container">
-  <h3 class="h3">{{ dictionary.pageCannotBeFound }}</h3>
-  <button class="btn" (click)="goToHomePage()">{{ dictionary.goToHomePage }}</button>
+<div class="container d-flex flex-column align-items-center">
+  <img class="not-found-img" src="assets/ghost.svg" alt="ghost">
+
+  <h2 class="h2">{{ dictionary.pageCannotBeFound }}</h2>
+
+  <button 
+    class="btn accent big"
+    (click)="goToHomePage()"
+  >{{ dictionary.goToHomePage }}</button>
 </div>

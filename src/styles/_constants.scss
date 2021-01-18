@@ -10,12 +10,17 @@ $std-hover-animation: all 0.3s;
 $swift-hover-animation: all 0.2s ease-out;
 
 $border-underlined: 1px solid $abs-white;
+$border-radius-std: 1px;
 
 $std-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
 
 $filter-to-abs-black: brightness(0) saturate(100%);
 $filter-to-black-complement: $filter-to-abs-black invert(3%) sepia(8%) saturate(16%) hue-rotate(314deg) brightness(109%)
   contrast(83%);
+$filter-to-white: $filter-to-abs-black invert(100%) sepia(0%) saturate(5232%) hue-rotate(281deg) brightness(111%)
+  contrast(87%);
+$filter-to-accent: $filter-to-abs-black invert(88%) sepia(50%) saturate(2289%) hue-rotate(346deg) brightness(101%)
+  contrast(101%);
 
 $font-family-std: 'Montserrat', 'Roboto', 'Arial', sans-serif;
 
