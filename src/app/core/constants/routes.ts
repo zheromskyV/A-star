@@ -2,7 +2,7 @@ import { CommonModel } from '../models/common';
 
 export const routes: CommonModel = {
   home: '',
-  algorithm: 'a-star',
+  algorithm: 'algorithm',
   about: 'about',
   contact: 'contact',
   notFound: 'not-found',
